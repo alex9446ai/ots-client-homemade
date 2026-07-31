@@ -12,4 +12,4 @@ if __name__ == "__main__":
         # Messaggio d'errore esplicito con tutti gli argomenti richiesti
         print("❌ Errore: Mancano argomenti obbligatori.")
         print("Uso corretto:")
-        print(f"python {argv[0]} [documento_originale] [ots_documento_originale] [op_return_bitcoin] [merkle_root_bitcoin]")
+        print(f"python {argv[0]} <documento_originale> <ots_documento_originale> <op_return_bitcoin> <merkle_root_bitcoin>")
