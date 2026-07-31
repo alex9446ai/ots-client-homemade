@@ -83,4 +83,4 @@ if __name__ == "__main__":
         # Messaggio d'errore esplicito con tutti gli argomenti richiesti
         print("❌ Errore: Mancano argomenti obbligatori.")
         print("Uso corretto:")
-        print("python verifica_passaggi.py [documento_originale] [passaggi.json] [op_return_bitcoin] [merkle_root_bitcoin]")
+        print("python verifica.py <documento_originale> <passaggi.json> <op_return_bitcoin> <merkle_root_bitcoin>")

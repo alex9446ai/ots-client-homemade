@@ -38,4 +38,7 @@ if __name__ == "__main__":
         # Pesca correttamente il primo argomento stringa passato da terminale
         stampa_percorso_ots(argv[1])
     else:
-        print("❌ Passa il percorso del file .ots come argomento.")
+        # Messaggio d'errore esplicito con tutti gli argomenti richiesti
+        print("❌ Errore: Manca un argomento obbligatorio.")
+        print("Uso corretto:")
+        print("python estrai_passaggi.py <ots_documento_originale> > passaggi.txt")

@@ -63,4 +63,7 @@ if __name__ == "__main__":
         passaggi = Path(argv[1]).read_text(encoding='utf-8')
         print(passaggi_come_json_compatto(passaggi))
     else:
-        print("❌ Passa il percorso del file con i passaggi estratti come argomento.")
+        # Messaggio d'errore esplicito con tutti gli argomenti richiesti
+        print("❌ Errore: Manca un argomento obbligatorio.")
+        print("Uso corretto:")
+        print("python passaggi_come_json.py <passaggi.txt> > passaggi.json")

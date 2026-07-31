@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ## Panoramica dei file
-- `__main__.py`: flusso principale che combina estrazione, serializzazione e verifica. Uso: `python __main__.py [documento_originale] [ots_file] [op_return_hex] [merkle_root_hex]`.
+- `__main__.py`: flusso principale che combina estrazione, serializzazione e verifica.
 - `estrai_passaggi.py`: legge un file `.ots` e ritorna la rappresentazione testuale dell'albero dei passaggi; contiene anche la funzione `stampa_percorso_ots` per uso da riga di comando.
 - `passaggi_come_json.py`: converte l'output testuale dei passaggi in un JSON "compatto" usato dalla logica di verifica.
 - `verifica.py`: applica i passaggi crittografici al documento originale, calcola l'OP_RETURN e il Merkle Root e li confronta con i valori attesi forniti dall'utente.
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 - Estrarre e stampare il percorso da un file `.ots`:
 
 ```bash
-python estrai_passaggi.py documento.pdf.ots > passaggi.txt
+python estrai_passaggi.py test.txt.ots > passaggi.txt
 ```
 
 - Convertire file di passaggi (testo) in JSON compatto:
@@ -39,13 +39,13 @@ python passaggi_come_json.py passaggi.txt > passaggi.json
 - Verifica completa (documento originale + file .ots -> calcola e confronta OP_RETURN e Merkle Root):
 
 ```bash
-python __main__.py documento.pdf documento.pdf.ots <op_return_atteso_hex> <merkle_root_atteso_hex>
+python __main__.py test.txt test.txt.ots <op_return_atteso_hex> <merkle_root_atteso_hex>
 ```
 
 Oppure eseguire la verifica a partire da un JSON di passaggi:
 
 ```bash
-python verifica.py documento.pdf passaggi.json <op_return_atteso_hex> <merkle_root_atteso_hex>
+python verifica.py test.txt passaggi.json <op_return_atteso_hex> <merkle_root_atteso_hex>
 ```
 
 Nota: gli esempi richiedono che i valori hex di OP_RETURN e Merkle Root siano forniti come stringhe esadecimali senza prefissi.
